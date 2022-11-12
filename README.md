@@ -1,10 +1,10 @@
 # Webpack - built by Dmytro Rylov \<yawuxi>
 
 ## Documentation navigation
-1. [Lets begin](#Lets begin)
-2. [Installed packages](#Installed packages)
-3. [Project structure](#Project structure)
-4. [Distributable structure](#Distributable structure)
+1. - [Lets begin](#Lets begin)
+2. - [Installed packages](#Installed packages)
+3. - [Project structure](#Project structure)
+4. - [Distributable structure](#Distributable structure)
 
 ## Lets begin
 For work with this build in new project, clone that repository `git clone <link to repository>`<br>
