@@ -11,7 +11,7 @@ For work with this build in new project, clone that repository `git clone <link 
 After, being in the project root, launch `npm i` - that command will install all dependencies which stored in package.json.<br>
 Thereafter you can start build by type in terminal `npm start`. Done!<br>
 
-## Installedpackages
+## Installed-packages
 ###### Webpack
 * webpack - webpack :D
 * webpack-cli - work with webpack from CLI
