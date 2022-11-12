@@ -16,8 +16,10 @@
   "author": "Dmytro <ryliov.work@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
