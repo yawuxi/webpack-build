@@ -1,12 +1,12 @@
 # Webpack - built by Dmytro Rylov \<yawuxi>
 
 ## Documentation navigation
-1. - [Lets begin](#Lets begin)
+1. - [Lets begin](#Lets-begin)
 2. - [Installed packages](#Installed packages)
 3. - [Project structure](#Project structure)
 4. - [Distributable structure](#Distributable structure)
 
-## Lets begin
+## Lets-begin
 For work with this build in new project, clone that repository `git clone <link to repository>`<br>
 After, being in the project root, launch `npm i` - that command will install all dependencies which stored in package.json.<br>
 Thereafter you can start build by type in terminal `npm start`. Done!<br>
