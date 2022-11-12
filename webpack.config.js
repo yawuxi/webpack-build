@@ -55,6 +55,7 @@ module.exports = {
       {
         test: /.js$/i,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -64,6 +65,8 @@ module.exports = {
       },
       {
         test: /.jsx$/i,
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -76,6 +79,7 @@ module.exports = {
       {
         test: /.ts$/i,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -85,6 +89,8 @@ module.exports = {
       },
       {
         test: /.tsx$/i,
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
