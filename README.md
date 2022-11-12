@@ -1,17 +1,17 @@
 # Webpack - built by Dmytro Rylov \<yawuxi>
 
 ## Documentation navigation
-1. - [Lets begin](#Lets-begin)
-2. - [Installed packages](#Installed packages)
-3. - [Project structure](#Project structure)
-4. - [Distributable structure](#Distributable structure)
+1. [Lets begin](#Lets-begin)
+2. [Installed packages](#Installed-packages)
+3. [Project structure](#Project-structure)
+4. [Distributable structure](#Distributable-structure)
 
 ## Lets-begin
 For work with this build in new project, clone that repository `git clone <link to repository>`<br>
 After, being in the project root, launch `npm i` - that command will install all dependencies which stored in package.json.<br>
 Thereafter you can start build by type in terminal `npm start`. Done!<br>
 
-## Installed packages
+## Installedpackages
 ###### Webpack
 * webpack - webpack :D
 * webpack-cli - work with webpack from CLI
@@ -59,7 +59,7 @@ Thereafter you can start build by type in terminal `npm start`. Done!<br>
 
 __Installed packages - 32__
 
-## Project structure
+## Project-structure
 ```
 project-name/
 ├── src/                           # Source folder
@@ -101,7 +101,7 @@ project-name/
 
 ```
 
-## Distributable structure
+## Distributable-structure
 ```
 ├── dist/                         # Distributable folder
 │   ├── assets                    # Assets folder
@@ -110,7 +110,7 @@ project-name/
 ```
 
 ## Documentation navigation
-1. [Lets begin](#Lets begin)
-2. [Installed packages](#Installed packages)
-3. [Project structure](#Project structure)
-4. [Distributable structure](#Distributable structure)
+1. [Lets begin](#Lets-begin)
+2. [Installed packages](#Installed-packages)
+3. [Project structure](#Project-structure)
+4. [Distributable structure](#Distributable-structure)
