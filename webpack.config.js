@@ -28,7 +28,8 @@ module.exports = {
     minimize: true,
     minimizer: [
       new TerserWebpackPlugin({
-        // Use multiprocessing parallel running to improve the build speed
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         parallel: true,
       }),
       new CssMinimizerWebpackPlugin()
@@ -113,7 +114,7 @@ module.exports = {
           template: path.resolve(__dirname, 'src/index.html'),
         },
 
-        // Only for production
+        //Only for production
         mode ? undefined :
           {
             minify: {
