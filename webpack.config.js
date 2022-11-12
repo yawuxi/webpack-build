@@ -57,23 +57,13 @@ module.exports = {
         test: /.js$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        use: 'babel-loader',
       },
       {
         test: /.jsx$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+        use: 'babel-loader',
       },
 
       //ts + tsx loaders
@@ -81,25 +71,14 @@ module.exports = {
         test: /.ts$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-typescript']
-          }
-        }
+        use: 'babel-loader'
       },
       {
         test: /.tsx$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react']
-          }
-        }
+        use: 'babel-loader'
       },
-
     ]
   },
 
