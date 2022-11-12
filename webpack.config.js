@@ -15,7 +15,7 @@ module.exports = {
   //file i/o settings
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
-    filename: '[name].[hash].js',
+    filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
