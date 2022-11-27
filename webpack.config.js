@@ -1,5 +1,5 @@
 const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerWebpackPlugin = require("html-minimizer-webpack-plugin");
@@ -78,6 +78,19 @@ module.exports = {
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
         use: 'babel-loader'
+      },
+
+      //image loader
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: path.resolve(__dirname, 'dist/assets')
+            }
+          },
+        ],
       },
     ]
   },
