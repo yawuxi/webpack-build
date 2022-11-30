@@ -1,5 +1,5 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerWebpackPlugin = require("html-minimizer-webpack-plugin");
@@ -16,7 +16,8 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     filename: 'bundle.[hash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: "/"
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss', '.sass']
@@ -40,6 +41,7 @@ module.exports = {
   //dev server
   devServer: {
     port: 4250,
+    historyApiFallback: true,
   },
 
   //loaders
@@ -86,9 +88,6 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {
-              outputPath: path.resolve(__dirname, 'dist/assets')
-            }
           },
         ],
       },
