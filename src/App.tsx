@@ -1,11 +1,9 @@
-//react
-import React from 'react';
 //styles
-import './App.scss'
+import style from './App.module.scss'
 
 const App: React.FC = () => {
   return (
-    <div className="app">
+    <div className={style.app}>
       <h1>I am webpack built by yawuxi!</h1>
     </div>
   );
