@@ -46,21 +46,36 @@ module.exports = {
   //loaders
   module: {
     rules: [
+      //css loaders
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
       //scss loaders
       {
-        test: /.s[ac]ss/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[name]__[local]--[hash:base64:7]",
+              },
+            },
+          },
+          "sass-loader",
+        ],
       },
-
       //js + jsx loaders
       {
-        test: /.js$/i,
+        test: /\.js$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, "src"),
         use: "babel-loader",
       },
       {
-        test: /.jsx$/i,
+        test: /\.jsx$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, "src"),
         use: "babel-loader",
@@ -68,13 +83,13 @@ module.exports = {
 
       //ts + tsx loaders
       {
-        test: /.ts$/i,
+        test: /\.ts$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, "src"),
         use: "babel-loader",
       },
       {
-        test: /.tsx$/i,
+        test: /\.tsx$/i,
         exclude: /node_modules/,
         include: path.resolve(__dirname, "src"),
         use: "babel-loader",
@@ -107,19 +122,19 @@ module.exports = {
         mode
           ? undefined
           : {
-              minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeRedundantAttributes: true,
-                useShortDoctype: true,
-                removeEmptyAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                keepClosingSlash: true,
-                minifyJS: true,
-                minifyCSS: true,
-                minifyURLs: true,
-              },
+            minify: {
+              removeComments: true,
+              collapseWhitespace: true,
+              removeRedundantAttributes: true,
+              useShortDoctype: true,
+              removeEmptyAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              keepClosingSlash: true,
+              minifyJS: true,
+              minifyCSS: true,
+              minifyURLs: true,
             },
+          },
       ),
     ),
     new CssMinimizerWebpackPlugin({
